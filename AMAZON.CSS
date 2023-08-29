@@ -1,0 +1,119 @@
+
+body{
+    background-image: url("IMAGEN/FONDO-ASUL.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    
+}
+h3 {
+        color: #fdfdfd;
+        text-align: left;
+        padding-left: 85px;
+        font-family: 'CASTELLAR', sans-serif;
+    }
+
+h2 {
+    font-family:'Imprint MT Shadow', sans-serif; 
+    
+}
+
+form {
+    background-image:  url('IMAGEN/FONDO de FROM.jpg');
+    background-size: cover;
+        padding: 20px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.761);
+        width: 45%;
+        margin: 0;
+        margin-right: auto;
+        margin-left: 30px;  
+        color: #ffffffe1;
+        
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime-local"],
+textarea,
+select {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: rgba(68, 66, 66, 0.601); /* Cambia el color de fondo a gris claro */
+    padding: 10px;
+    border: 1px solid #00000027;
+}
+
+textarea{
+    color:#fdfdfd;   
+}
+input[required] {
+    color: rgb(250, 252, 251);
+    
+}
+
+
+    
+select {
+    margin-bottom: 10px;
+}
+input[type="submit"] {
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+input[type="submit"]:hover {
+    background-color:#201f1fdc;
+}
+/* LOGO O NOMBRE DE LA EMPRESA MILENIUM(DIV) */
+
+
+.form-container h3 {
+    margin: 0;
+    font-size: 24px;
+}
+/*  arriba mejora*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-left: 60%;
+    margin-top: -70%;
+}
+
+.form-container {
+    width: 100%;
+    padding: 10PX;
+    border: 1px solid #313131;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.849);
+    background-size: cover;
+    color: #ffffffe1;
+
+}
+
+.logo-container {
+    width: 60%;
+    text-align: right;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}

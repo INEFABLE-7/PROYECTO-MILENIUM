@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Clientes</title>
+    <link rel="stylesheet" href="AMAZON.CSS">
+</head>
+<body>
+    <h3>REGISTRO DE CLIENTES (ENCARGOS A LA EMPRESA)</h3> 
+
+    <form action="AMAZON.php"  action="IMPRIMIR.PHP"  method="post">
+        <h2>Datos del Cliente</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required><br><br>
+        
+        <label for="Apellido">ApellidoS:</label>
+        <input type="text" id="Apellido" name="apellido" placeholder="Ingrese sus apellidos" required><br><br>
+
+        <label for="DNI">DNI:</label>
+        <input type="text" id="DNI" name="DNI" placeholder="Ingrese su teléfono" required><br><br>
+        
+        <label for="telefono">Teléfono:</label>
+        <input type="number" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required><br><br>
+
+        <label for="Fecha">Fecha:</label>
+        <input type="datetime-local" id="Fecha" name="Fecha" required><br><br>
+
+        
+        <h2>Características del Producto</h2>
+        <label for="tip_produ">Tipo de producto:</label>
+    <select id="tip_produ" name="tip_produ">
+        <option value="laptop">LAPTOP</option>
+        <option value="usb">USB</option>
+        <option value="impresora">IMPRESORA</option>
+        <option value="telefono">TELÉFONO</option>
+        <option value="tablet">TABLET</option>
+        <option value="camara">CÁMARA</option>
+        <option value="otros">OTROS</option>
+    </select>
+    <br><br>
+        <label for="descripcion">Descripción del producto:</label><br>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50" placeholder="Pedido del cliente" required></textarea><br><br>
+        
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" placeholder="Ingrese cantidad encargada" required><br><br>
+        
+        <label for="precio">Precio estimado:</label>
+        <input type="number" id="precio" name="precio" step="0.01" placeholder="Precio" required><br><br>
+        
+        <input type="submit" value="REGISTRAR">
+    </form>
+
+    
+    
+    
+
+    <div class="container">
+        <div class="form-container">
+            <h3>CONSULTORIA E INFORMATICA
+                    AMAZON</H3>
+        </div>
+        <div class="logo-container">
+            <img class="sinfondo" src="IMAGEN\LOGO ACEPTADO1.png" alt="Logo de la empresa">
+    </div>
+</body>
+</html>
