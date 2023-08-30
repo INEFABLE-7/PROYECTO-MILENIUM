@@ -1,5 +1,4 @@
 <?php 
-
 $server = "localhost";
 $user = "root";
 $pass = "";
@@ -33,18 +32,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $conectar->begin_transaction();
 
         try {
+            $nombre_empresa = "AMAZON"; 
+
+            // Consulta para obtener el ID de la empresa
+            $sql_obtener_empresa = "SELECT id_empresa FROM empresa WHERE nombre = '$nombre_empresa'";
+            $resultado_empresa = $conectar->query($sql_obtener_empresa);
+
+            if ($resultado_empresa->num_rows > 0) {
+                $fila_empresa = $resultado_empresa->fetch_assoc();
+                $empresa_id = $fila_empresa['id_empresa'];
+            }
+
             // Insertar datos en la tabla "cliente"
-            $sql_cliente = "INSERT INTO cliente (nombre, apellido, DNI, telefono, fecha)
-                            VALUES ('$nombre', '$apellido', '$DNI', '$telefono', '$fecha')";
+            $sql_cliente = "INSERT INTO cliente (nombre, apellido, DNI, telefono, fecha, FK_EMPRESA_ENLACE)
+                            VALUES ('$nombre', '$apellido', '$DNI', '$telefono', '$fecha', $empresa_id)";
 
             if ($conectar->query($sql_cliente) !== TRUE) {
                 throw new Exception("Error en el registro del cliente: " . $conectar->error);
             }
 
-            $cliente_id = $conectar->insert_id;
+            $cliente_id = $conectar->insert_id; // Obtener el ID del cliente
 
             // Insertar datos en la tabla "producto" relacionados al cliente
-            $sql_producto = "INSERT INTO producto (tip_produ, descripcion, cantidad, precio, cliente_id)
+            $sql_producto = "INSERT INTO producto (tip_produ, descripcion, cantidad, precio, FK_CLIENTE_ENLACE)
                             VALUES ('$tip_produ', '$descripcion', $cantidad, $precio, $cliente_id)";
 
             if ($conectar->query($sql_producto) !== TRUE) {
