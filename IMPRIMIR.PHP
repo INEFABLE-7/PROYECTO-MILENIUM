@@ -8,13 +8,6 @@
 
 
 </head>
-<body class="body-style">
-    <h1 class="temaimp">Buscar Cliente y su Relación</h1>
-    <form class="forbus" action="IMPRIMIR.PHP" method="post">
-        <label for="nombre_buscar">Ingrese el nombre del cliente:</label>
-        <input type="text" id="nombre_buscar" name="nombre_buscar">
-        <button type="submit">Buscar</button>
-    </form>
 
 <?php
 

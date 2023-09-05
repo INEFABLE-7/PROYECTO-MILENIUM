@@ -1,38 +1,42 @@
-.body-style {
-    background-image: url("IMAGEN/FONDO-ASUL.jpg");
-    background-size: 100% 100%;
+
+
+
+
+/* Estilos generales para todos los dispositivos */
+body {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/004/227/442/non_2x/modern-futuristic-technology-geometric-elegant-blue-in-grey-background-vector.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
 }
 
-.forbus {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px; /* Espacio entre el h1 y el formulario */
-}
 
+/* Estilos para .resultado */
 .resultado {
     border: 1px solid #000000;
     padding: 20px;
-    margin: 20px;
-    background-color: #93f295;
-    box-shadow: 0 4px 6px rgba(43, 110, 49, 0.93);
+    background: url("https://img.freepik.com/fotos-premium/fondo-blanco-patron-azul_700248-11628.jpg?w=360");
+    box-shadow: 0 4px 6px rgba(208, 86, 171, 0.789);
     border-radius: 10px;
+    font-weight: bold;
+    font-family: Adobe Sabon;
+    
 }
+
 
 
 .dni, .telefono, .fecha, .empresa, .direccion, .empresa-telefono, .producto, .descripcion, .cantidad, .precio {
     font-size: 16px;
     margin-top: 6px;
     color: #000000;
+    font-weight: bold;
+    font-family: Adobe Sabon;
 }
 
 .separador {
@@ -40,4 +44,57 @@
     text-align: center;
     font-size: 18px;
     color: #999;
+}
+/* buscador stltios siuuu*/
+.buscar {
+   background-color: #262828a3;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(50, 168, 222, 0.621);
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.temaimp {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fbfbfb;
+}
+
+.forbus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forbus label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.forbus input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4a7dcf98;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #99999900;
+}
+
+.forbus button {
+    background-color: #9e9a9ae3;
+    color: rgb(2, 11, 9);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.forbus button:hover {
+    background-color: #3757d8;
 }

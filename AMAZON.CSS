@@ -27,6 +27,9 @@ form {
     width: 80%;
     max-width: 500px;
     color: #ffffffe1;
+    position: absolute;
+    z-index: 2;
+    margin-left: 70px;
 }
 
 
@@ -34,6 +37,7 @@ label {
     display: block;
     font-weight: bold;
     margin-top: 10px;
+   
 }
 input[type="text"],
 input[type="email"],
@@ -48,7 +52,7 @@ select {
     margin-left: 10px;
     border: 1px solid #000000;
     border-radius: 5px;
-    background-color: rgba(68, 66, 66, 0.601); /* Cambia el color de fondo a gris claro */
+    background-color: rgba(68, 66, 66, 0.601); 
     padding: 10px;
     border: 1px solid #00000027;
 }
@@ -78,3 +82,37 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color:#201f1fdc;
 }
+
+
+
+.nomemp {
+    display: flex;
+    justify-content: flex-end;
+    padding-right:  195px;
+    padding-bottom:  350px;
+    position: fixed;
+    right: 0;
+    bottom:0;
+    z-index: 1; 
+}
+
+.temad {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Ajusta el relleno según tus necesidades */
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding-right:  50px;
+    padding-bottom:  365px;
+    
+}
+.TEMA{
+    font-family: Officina Sans Bold;
+    color:rgb(246, 250, 246);
+}
+
