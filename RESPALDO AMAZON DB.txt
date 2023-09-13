@@ -1,0 +1,31 @@
+-- Crear la tabla "empresa"
+CREATE TABLE empresa (
+    id_empresa INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(70),
+    direccion VARCHAR(270),
+    telefono INT(9)
+);
+
+-- Crear la tabla "cliente"
+CREATE TABLE cliente (
+    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(70),
+    apellido VARCHAR(150),
+    DNI VARCHAR(10),
+    telefono VARCHAR(15),
+    fecha DATETIME,
+    FK_EMPRESA_ENLACE INT,
+    FOREIGN KEY (FK_EMPRESA_ENLACE) REFERENCES empresa(id_empresa)
+);
+
+-- Crear la tabla "producto"
+CREATE TABLE producto (
+    id_producto INT AUTO_INCREMENT PRIMARY KEY,
+    tip_produ VARCHAR(300),
+    descripcion TEXT,
+    cantidad INT,
+    precio DECIMAL(7, 2),
+    FK_CLIENTE_ENLACE INT,
+    FOREIGN KEY (FK_CLIENTE_ENLACE) REFERENCES cliente(id_cliente)
+);
+

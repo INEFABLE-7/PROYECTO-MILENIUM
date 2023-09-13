@@ -42,20 +42,21 @@ if (!empty($DNI_buscar)) {
     if ($resultado_buscar->num_rows > 0) {
         while ($fila = $resultado_buscar->fetch_assoc()) {
             echo "<div class='resultado'>";
-            echo "<div class='nombre'>Nombre: " . $fila['nombre'] . "</div>";
-            echo "<div class='apellido'>Apellido: " . $fila['apellido'] . "</div>";
-            echo "<div class='dni'>DNI: " . $fila['DNI'] . "</div>";
-            echo "<div class='telefono'>Teléfono: " . $fila['telefono'] . "</div>";
-            echo "<div class='fecha'>Fecha: " . $fila['fecha'] . "</div>";
-            echo "<div class='empresa'>Empresa: " . $fila['empresa_nombre'] . "</div>";
-            echo "<div class='direccion'>Dirección: " . $fila['direccion'] . "</div>";
-            echo "<div class='empresa-telefono'>Teléfono de la empresa: " . $fila['empresa_telefono'] . "</div>";
-            echo "<div class='producto'>Producto: " . $fila['tip_produ'] . "</div>";
-            echo "<div class='descripcion'>Descripción: " . $fila['descripcion'] . "</div>";
-            echo "<div class='cantidad'>Cantidad: " . $fila['cantidad'] . "</div>";
-            echo "<div class='precio'>Precio: " . $fila['precio'] . " soles" . "</div>";
-            echo "<div class='separador'>------------------------</div>";
-            echo "</div>";
+echo "<div class='nombre'>Nombre: " . $fila['nombre'] . "</div>";
+echo "<div class='apellido'>Apellido: " . $fila['apellido'] . "</div>";
+echo "<div class='dni'>DNI: " . $fila['DNI'] . "</div>";
+echo "<div class='telefono'>Teléfono: " . $fila['telefono'] . "</div>";
+echo "<div class='fecha'>Fecha: " . $fila['fecha'] . "</div>";
+echo "<div class='empresa'>Empresa: " . $fila['empresa_nombre'] . "</div>";
+echo "<div class='direccion'>Dirección: " . $fila['direccion'] . "</div>";
+echo "<div class='empresa_telefono'>Teléfono de la empresa: " . $fila['empresa_telefono'] . "</div>";
+echo "<div class='producto'>Producto: " . $fila['tip_produ'] . "</div>";
+echo "<div class='descripcion'>Descripción: " . $fila['descripcion'] . "</div>";
+echo "<div class='cantidad'>Cantidad: " . $fila['cantidad'] . "</div>";
+echo "<div class='precio'>Precio: " . $fila['precio'] . " soles" . "</div>";
+echo "<div class='separador'></div>"; // Separador sin contenido
+echo "</div>";
+
         }
     } else {
         echo "No se encontraron registros para el cliente: $DNI_buscar<br>";
