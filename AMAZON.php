@@ -1,4 +1,9 @@
-<?php 
+<?php
+require_once('C:/xampp/htdocs/AMAZON/LIBRARY/tcpdf.php');
+
+// Define la constante PDF_CREATOR antes de su uso
+define('PDF_CREATOR', 'INEFABLE-7');
+
 $server = "localhost";
 $user = "root";
 $pass = "";
@@ -32,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $conectar->begin_transaction();
 
         try {
-            $nombre_empresa = "AMAZON"; 
+            $nombre_empresa = "AMAZON";
 
             // Consulta para obtener el ID de la empresa
             $sql_obtener_empresa = "SELECT id_empresa FROM empresa WHERE nombre = '$nombre_empresa'";
@@ -41,6 +46,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($resultado_empresa->num_rows > 0) {
                 $fila_empresa = $resultado_empresa->fetch_assoc();
                 $empresa_id = $fila_empresa['id_empresa'];
+            } else {
+                // Si no se encontró la empresa, puedes insertarla aquí
+                $sql_insertar_empresa = "INSERT INTO empresa (nombre) VALUES ('$nombre_empresa')";
+                if ($conectar->query($sql_insertar_empresa) !== TRUE) {
+                    throw new Exception("Error al insertar la empresa: " . $conectar->error);
+                }
+                $empresa_id = $conectar->insert_id; // Obtener el ID de la empresa recién insertada
             }
 
             // Insertar datos en la tabla "cliente"
@@ -59,21 +71,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($conectar->query($sql_producto) !== TRUE) {
                 throw new Exception("Error en el registro del producto: " . $conectar->error);
-            }
-
-            // Confirmar la transacción
-            $conectar->commit();
-
-            echo "Registro de cliente y producto exitoso<br>";
-        } catch (Exception $e) {
-            // Si hay un error, revertir la transacción
-            $conectar->rollback();
-            echo "Error: " . $e->getMessage();
-        }
-    } else {
+            }else {
         echo "Por favor, complete todos los campos antes de enviar.";
     }
-}
+
 
 // Cerrar la conexión
 $conectar->close();

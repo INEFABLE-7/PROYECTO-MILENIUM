@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Cliente</title>
     <link rel="stylesheet" href="IMPRIMIR.CSS">
+    
 </head>
 <body>
 
@@ -63,8 +64,8 @@ echo "</div>";
     }
 }
 
-// Cerrar la conexión
-$conectar->close();
+
+
 ?>
 </body>
 </html>

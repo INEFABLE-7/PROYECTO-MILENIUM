@@ -115,4 +115,20 @@ input[type="submit"]:hover {
     font-family: Officina Sans Bold;
     color:rgb(246, 250, 246);
 }
+/*estilos de boton que pasa del archivo formulario a archivo buscar */
+#botonpasar {
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 100px;
+    
+}
 
+/* Cambiar el estilo al pasar el mouse */
+#botonpasar:hover {
+    background-color:#201f1fdc;
+}

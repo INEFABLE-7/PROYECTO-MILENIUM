@@ -31,7 +31,7 @@ body {
 /* Estilos para .resultado */
 .resultado {
     width: 80mm; 
-
+    width: 100%;
     height: 100mm;    
     background-color: #fff;
     padding: 5mm; 
