@@ -124,3 +124,27 @@ body {
 .forbus button:hover {
     background-color: #3757d8;
 }
+
+
+/* Estilos para el botón */
+.boton-regresar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073e6; /* Cambia el color de fondo a tu preferencia */
+    color: #fff; /* Cambia el color del texto a tu preferencia */
+    text-decoration: none;
+    border: 1px solid #0073e6; /* Cambia el color del borde a tu preferencia */
+    border-radius: 5px; /* Añade esquinas redondeadas al botón */
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave al pasar el mouse */
+  }
+  
+  /* Estilos para el botón al pasar el mouse */
+  .boton-regresar:hover {
+    background-color: #005bb8; /* Cambia el color de fondo al pasar el mouse */
+    color: #fff; /* Cambia el color del texto al pasar el mouse */
+  }
+  
+
+  

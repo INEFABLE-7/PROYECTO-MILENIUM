@@ -1,10 +1,9 @@
 
 body{
-    background-image: url("IMAGEN/FONDO-ASUL.jpg");
-    background-size:  100% 100%;
+    background-image: url("IMAGEN/FONDO.png");
     background-position: center;
     background-attachment: fixed;
-    font-family: Arial, sans-serif;
+    background-size: cover;
     
 }
 h3 {
@@ -77,25 +76,12 @@ input[type="submit"] {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    margin-left: 45px;
     
 }
 input[type="submit"]:hover {
     background-color:#201f1fdc;
 }
-
-
-
-.nomemp {
-    display: flex;
-    justify-content: flex-end;
-    padding-right:  195px;
-    padding-bottom:  350px;
-    position: fixed;
-    right: 0;
-    bottom:0;
-    z-index: 1; 
-}
-
 .temad {
     
     display: flex;
@@ -116,19 +102,29 @@ input[type="submit"]:hover {
     color:rgb(246, 250, 246);
 }
 /*estilos de boton que pasa del archivo formulario a archivo buscar */
-#botonpasar {
+
+
+
+/* Estilo para el contenedor de botones */
+#botones-container {
+    text-align: center; /* Centra los elementos horizontalmente */
+    margin-top: 20px; /* Espacio superior entre el contenedor y otros elementos */
+}
+
+/* Estilo para los botones y enlaces */
+.custom-button {
+    display: inline-block; /* Hace que los elementos sean en línea */
     background-color: rgb(0, 0, 0);
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
-    margin-left: 100px;
-    
+    margin: 0 10px; /* Espacio entre los elementos */
 }
 
 /* Cambiar el estilo al pasar el mouse */
-#botonpasar:hover {
-    background-color:#201f1fdc;
+.custom-button:hover {
+    background-color: #201f1fdc;
 }
